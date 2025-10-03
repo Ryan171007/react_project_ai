@@ -1,4 +1,3 @@
-import type { Route } from "./+types/home";
 import { useEffect } from "react";
 import { usePuterStore } from "~/lib/puter";
 import { useLocation, useNavigate } from "react-router";
@@ -6,11 +5,10 @@ import Navbar from "~/components/Navbar";
 import { resumes } from "~/constants";
 import ResumeCards from "~/components/ResumeCards";
 
-
-export function meta({}: Route.MetaArgs) {
+export const meta = () => {
   return [
     { title: "Resuming" },
-    { name: "", content: "A start for you dream" },
+    { name: "description", content: "Welcome to your dream" },
   ];
 }
 

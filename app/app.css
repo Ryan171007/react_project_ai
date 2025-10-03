@@ -16,6 +16,8 @@
   --color-badge-green-text: #254d4a;
   --color-badge-red-text: #752522;
   --color-badge-yellow-text: #73321b;
+
+  --ease-sp: cubic-bezier(.6,.1,1,.4);
 }
 
 html,
@@ -112,6 +114,14 @@ form {
     @apply flex flex-col gap-8 w-1/2 px-8 max-lg:w-full py-6;
   }
 
+  .loading-span{
+    @apply inline-block w-5 h-5 rounded-[100%] bg-[#8E97C5] m-[8px];
+  }
+
+  .span-animation{
+    @apply animate-bounce duration-600 ease-[var(--ease-sp)] 
+  }
+
   .navbar {
     @apply flex flex-row justify-between items-center bg-white rounded-full p-4 w-full px-8 max-w-[1200px] mx-auto;
   }
@@ -167,4 +177,12 @@ form {
   to {
     opacity: 1;
   }
+}
+
+@keyframes bounce1{
+  to 50%{
+    transform: translateY(-50%);
+   animation-iteration-count: infinite;
+  }
+
 }

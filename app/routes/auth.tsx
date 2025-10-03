@@ -24,14 +24,16 @@ const Auth = () => {
 		<div className="gradient-border shadow-lg">
 			<section className="flex flex-col gap-8 bg-white rounded-2xl p-10">
 				<div className="flex gap-2 flex-col items-center justify-center text-center">
-				<h1>Welcome</h1>
-				<h2>Sing in with continue your Job Journey</h2>
+					<h1>Welcome</h1>
+					<h2>Sing in with continue your Job Journey</h2>
 				</div>
 				<div>
 					{ isLoading? (
-					<button className="auth-button">
-						<p> Singin you in...</p>	
-					</button>
+						<div className="flex flex-row items-center justify-center">
+							<span className="loading-span span-animation delay-100"></span>
+							<span className="loading-span span-animation delay-200"></span>
+							<span className="loading-span span-animation delay-300"></span>
+						</div>
 					) : (
 					<>
 						{auth.isAuthenticated ? (
